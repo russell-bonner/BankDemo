@@ -15,7 +15,7 @@
     "JES": true,
     "CICS": true,
     "MQ": false,
-    "is64bit": false,
+    "is64bit": true,
     "database": "VSAM",
     "PAC": {
       "enabled": false,
