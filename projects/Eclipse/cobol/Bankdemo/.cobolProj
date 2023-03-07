@@ -91,9 +91,9 @@
                </options>
             </deploy_settings>
             <build_events xsi:type="buildEventsSettings">
-               <post_build_script>copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.MOD C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
-copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.dll C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
-copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.idy C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib</post_build_script>
+               <post_build_script>copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.MOD C:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib
+copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.dll C:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib
+copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.idy C:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib</post_build_script>
                <pre_build_script></pre_build_script>
             </build_events>
          </configuration>

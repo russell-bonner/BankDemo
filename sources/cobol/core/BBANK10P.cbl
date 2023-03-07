@@ -20,7 +20,7 @@
       *****************************************************************
       * Program:     BBANK10P.CBL                                     *
       * Layer:       Business logic                                   *
-      * Function:    Signon to system to identify user  v1            *
+      * Function:    Signon to system to identify user  v2            *
       *****************************************************************
 
        IDENTIFICATION DIVISION.
