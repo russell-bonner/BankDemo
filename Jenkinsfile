@@ -17,11 +17,6 @@ node {
 		git branch: "v8.0",
 		url: 'https://github.com/russell-bonner/BankDemo.git'
 	}
-	//dir('GitHub\\BankDemoJenkins') {
-	//	git branch: "main",
-	//	url: 'https://github.com/russell-bonner/BankDemoJenkins.git'
-	//}
-    }
 
     stage('Create release folder structure') {  
     	dir('Release') {
@@ -64,7 +59,7 @@ node {
 	 write-host "**************"
 	 write-host "*--- INFO ---*"
 	 write-host "*"
-	 write-host "* BANKVSAM region does NOT exists. Good to continue."
+	 write-host "* BANKVSAM region does NOT exist. Processing continues."
 	 write-host "*"
 	 write-host "*------------*"
 	 write-host "**************"
@@ -75,7 +70,7 @@ node {
     stage('Build') {
         dir('GitHub\\BankDemo\\scripts\\build') {
 		powershell '''
-		python build.xml.py
+		python MFBuild.py
 		'''
 		archiveArtifacts artifacts: 'build.txt', fingerprint: true
 	}
