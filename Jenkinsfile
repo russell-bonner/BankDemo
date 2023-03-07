@@ -17,10 +17,6 @@ node {
 		git branch: "v8.0",
 		url: 'https://github.com/russell-bonner/BankDemo.git'
 	}
-	//dir('GitHub\\BankDemoJenkins') {
-	//	git branch: "main",
-	//	url: 'https://github.com/russell-bonner/BankDemoJenkins.git'
-	//}
     }
 
     stage('Create release folder structure') {  
@@ -73,9 +69,9 @@ node {
     }
 
     stage('Build') {
-        dir('GitHub\\BankDemo\\scripts\\build') {
+        dir('GitHub\\BankDemo\\scripts') {
 		powershell '''
-		python MFBuild.py
+		python \\build\MFBuild.py
 		'''
 		archiveArtifacts artifacts: 'build.txt', fingerprint: true
 	}
