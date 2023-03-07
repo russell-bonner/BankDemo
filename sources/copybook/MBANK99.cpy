@@ -1,8 +1,8 @@
-      *   Micro Focus COBOL 2017  7.0.00247
+      *   Micro Focus COBOL 2017  8.0.00215
       *   Micro Focus BMS Screen Painter
       *   MapSet Name   MBANK99
-      *   Date Created  11/08/2021
-      *   Time Created  19:41:43
+      *   Date Created  03/07/2023
+      *   Time Created  20:34:36
 
       *  Output Data For Map BANK99A
          01 BANK99AO REDEFINES MAPAREA.

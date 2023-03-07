@@ -6,7 +6,7 @@ This software may be used, modified, and distributed
 solely for internal demonstration purposes with other 
 Micro Focus software, and is otherwise subject to the EULA at
 https://www.microfocus.com/en-us/legal/software-licensing.
-
+ 
 THIS SOFTWARE IS PROVIDED "AS IS" AND ALL IMPLIED 
 WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF
 MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE,
@@ -23,9 +23,9 @@ WITH THIS SOFTWARE.
 	<property name="pathVar.PROJECT_LOC" value="${basedir}"/>
 	<property environment="env"/>
 	<property name="DirsetBuild" value="${basedir}/copybook"/>
-	<property name="DirsetGenerated" value="${basedir}/generated"/>
-	<property name='dataversion' value="VSAM"/>
-	<property name='64bitset' value="false"/>
+	<property name="DirsetBuildBMS" value="${basedir}/bmscopy"/>
+	<property name='dataversion' value="vsam"/>
+	<property name='64bitset' value="true"/>
 	<property name="cfg" value="New_Configuration"/>
 	<property name="cfgtarget" value="cfg.${cfg}"/>
 	<property name="forceCompile" value="true"/>
@@ -38,40 +38,16 @@ WITH THIS SOFTWARE.
 	<!--  ******************************  -->
 	<!--  * OS-specific initialisation *  -->
 	<!--  ******************************  -->
-	<condition property="windows">
-		<os family="windows"/>
-	</condition>
-	<condition property="unix">
-		<os family="unix"/>
-	</condition>
-	<ac:if>
-		<isset property="windows"/>
-		<then>
-			<property name="dllext" value="dll"/>
-			<property name="exeext" value="exe"/>
-			<property name="objext" value="obj"/>
-			<property name="equalsInDir" value="="/>
-			<property name="pathVar.pS" value=";"/>
-			<property name="shell" value="cmd"/>
-			<property name="shell.ext" value=".bat"/>
-			<property name="shell.arg" value="/c"/>
-			<property name="script.header" value="@rem MS-DOS Batch File"/>
-		</then>
-	</ac:if>
-	<ac:if>
-		<isset property="unix"/>
-		<then>
-			<property name="dllext" value="so"/>
-			<property name="exeext" value=""/>
-			<property name="objext" value="o"/>
-			<property name="equalsInDir" value="="/>
-			<property name="pathVar.pS" value=":"/>
-			<property name="shell" value="sh"/>
-			<property name="shell.ext" value=".sh"/>
-			<property name="shell.arg" value="-c"/>
-			<property name="script.header" value="#!/bin/sh"/>
-		</then>
-	</ac:if>
+	<property name="dllext" value="dll"/>
+	<property name="exeext" value="exe"/>
+	<property name="objext" value="obj"/>
+	<property name="equalsInDir" value="="/>
+	<property name="pathVar.pS" value=";"/>
+	<property name="shell" value="cmd"/>
+	<property name="shell.ext" value=".bat"/>
+	<property name="shell.arg" value="/c"/>
+	<property name="script.header" value="@rem MS-DOS Batch File"/>
+
 
 	<!--  **********************  -->
 	<!--  * COBOL source files *  -->
@@ -101,7 +77,7 @@ WITH THIS SOFTWARE.
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
 		<path type="copybook" name="${DirsetBuild}"/>
-		<path type="copybook" name="${DirsetGenerated}"/>
+		<path type="copybook" name="${DirsetBuildBMS}"/>
 	</mffilelist>
 
 	<!--  *************************  -->
@@ -135,21 +111,9 @@ WITH THIS SOFTWARE.
 	
 	<target name="cobol.link.file">                 
         <propertyregex input="${ObjName}" regexp="((.*[\\/])*)([^\.]*)\..*" select="\3" property="basename" casesensitive="false" override="true"/>
-		<ac:if>
-		<isset property="windows"/>
-		<then>
-			<cobollink objectfile="${ObjName}" entrypoint="" sharedRts="true" destfile="${basename}" destdir="${loaddir}" is64bit="${64bitset}" failonerror="${cobollinkFailOnError}" desttype="${dllext}" threadedRts="false">
-        	</cobollink>
-		</then>
-	</ac:if>
-	<ac:if>
-		<isset property="unix"/>
-		<then>
-			<cobollink objectfile="${ObjName}" entrypoint="" sharedRts="true" destfile="${basename}" destdir="${loaddir}" is64bit="${64bitset}" failonerror="${cobollinkFailOnError}" desttype="so" threadedRts="false">
-        	</cobollink>
-		</then>
-	</ac:if>        
-    </target>
+		<cobollink objectfile="${ObjName}" entrypoint="" sharedRts="true" destfile="${basename}" destdir="${loaddir}" is64bit="${64bitset}" failonerror="${cobollinkFailOnError}" desttype="${dllext}" threadedRts="false">
+        </cobollink>
+	</target>
 
 
 	<target name="clean.cfg.New_Configuration">
