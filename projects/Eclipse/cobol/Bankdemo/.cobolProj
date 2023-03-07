@@ -2,9 +2,8 @@
 <project xsi:schemaLocation="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="cobolProject" name="Bankdemo" uuid="57e56d7c-4084-49ef-95d3-f68d3a40bdde" version="5.0">
    <settings xsi:type="projectSettingsContainer">
       <copybook-paths xsi:type="copybookPathsSettings">
-         <path enabled="true" name="/Bankdemo" type="mfpath"/>
-         <path enabled="false" name="/Bankdemo/generated" type="mfpath"/>
          <path enabled="true" name="/Bankdemo/copybook" type="mfpath"/>
+         <path enabled="true" name="/Bankdemo" type="mfpath"/>
          <path enabled="false" name="/Bankdemo/vsam" type="mfpath"/>
          <path enabled="false" name="/Bankdemo/bms" type="mfpath"/>
          <path enabled="false" name="/Bankdemo/jcl" type="mfpath"/>
@@ -39,7 +38,6 @@
          <path enabled="true" name="/Bankdemo/bms" type="mfpath"/>
          <path enabled="true" name="/Bankdemo/jcl" type="mfpath"/>
          <path enabled="true" name="/Bankdemo/core" type="mfpath"/>
-         <path enabled="true" name="/Bankdemo/generated" type="mfpath"/>
       </build-precedence-paths>
       <configurations default="loadlib" linkedWith="2017" xsi:type="buildConfigurationsContainer">
          <configuration description="loadlib" type="all_dll" xsi:type="cobolBuildConfiguration">
@@ -92,6 +90,12 @@
                   <option id="deployPatterns" name="deploySettings" value="loadlib/*${exeext}"/>
                </options>
             </deploy_settings>
+            <build_events xsi:type="buildEventsSettings">
+               <post_build_script>copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.MOD C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
+copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.dll C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
+copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.idy C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib</post_build_script>
+               <pre_build_script></pre_build_script>
+            </build_events>
          </configuration>
       </configurations>
       <dependent-projects xsi:type="dependentProjectsSettings"/>
@@ -157,10 +161,6 @@
          <file compile="true" path="core/BCASH01P.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/BCASH02P.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/BCASH03P.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="core/CLOSEFIL.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="core/DFHUAINS.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="core/DFHZCSGM.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="core/OPENFIL.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/SBANK00P.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/SBANK10P.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/SBANK20P.cbl" xsi:type="cobolFile"/>
