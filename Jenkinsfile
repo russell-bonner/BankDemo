@@ -71,9 +71,9 @@ node {
     stage('Build') {
         dir('GitHub\\BankDemo\\scripts\\build') {
 		powershell '''
-		python MFBuild.py
+		python MF_Ant_Build_Win_x64.py
 		'''
-		//archiveArtifacts artifacts: 'build.txt', fingerprint: true
+		archiveArtifacts artifacts: 'build.txt', fingerprint: true
 	}
     }
 
@@ -90,7 +90,7 @@ node {
     }
      
     stage('Deploy') {
-        dir('GitHub\\BankDemo\\config') {
+        dir('GitHub\\BankDemo\\scripts\\config') {
 		//Logoff
 		bat '''curl -X "DELETE" "http://127.0.0.1:10086/logoff" -H "Cache-Control: no-cache" -H "Origin:http://localhost:86" -H "Host:localhost:86" -H "accept: application/json" -H "X-Requested-With: X-Requested-With"'''
 
