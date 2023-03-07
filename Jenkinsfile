@@ -71,7 +71,7 @@ node {
     stage('Build') {
         dir('GitHub\\BankDemo\\scripts') {
 		powershell '''
-		python \\build\MFBuild.py
+		python build\\MFBuild.py
 		'''
 		archiveArtifacts artifacts: 'build.txt', fingerprint: true
 	}
