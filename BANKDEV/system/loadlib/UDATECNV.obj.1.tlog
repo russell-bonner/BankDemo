@@ -1,0 +1,15 @@
+#"C:\Program Files (x86)\Micro Focus\Enterprise Developer\bin64\cobol.exe" C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\UDATECNV.cbl DELINT USEC:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib\UDATECNV.cbl.dir ;
+^C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\UDATECNV.cbl
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.CPY
+!$COBCPY\CABENDD.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CABENDD.cpy
+-C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CABENDD.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CDATED.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CDATED.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CDATED.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CDATED.CPY
+!$COBCPY\CDATED.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CDATED.cpy

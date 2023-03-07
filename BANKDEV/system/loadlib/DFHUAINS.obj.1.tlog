@@ -1,0 +1,2 @@
+#"C:\Program Files (x86)\Micro Focus\Enterprise Developer\bin64\cobol.exe" C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHUAINS.cbl DELINT USEC:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib\DFHUAINS.cbl.dir ;
+^C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHUAINS.cbl

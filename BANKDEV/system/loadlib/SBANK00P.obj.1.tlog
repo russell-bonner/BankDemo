@@ -1,0 +1,36 @@
+#"C:\Program Files (x86)\Micro Focus\Enterprise Developer\bin64\cobol.exe" C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\SBANK00P.cbl DELINT USEC:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib\SBANK00P.cbl.dir ;
+^C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\SBANK00P.cbl
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKDAT.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKDAT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKDAT.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKDAT.CPY
+!$COBCPY\CBANKDAT.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CBANKDAT.cpy
+-C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CBANKDAT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKEXT.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKEXT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKEXT.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CBANKEXT.CPY
+!$COBCPY\CBANKEXT.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CBANKEXT.cpy
+-C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CBANKEXT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.CPY
+!$COBCPY\DFHAID.cpy
++"C:\Program Files (x86)\Micro Focus\Enterprise Developer\cpylib\DFHAID.cpy"
+-"C:\Program Files (x86)\Micro Focus\Enterprise Developer\cpylib\DFHAID.cpy"
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHBMSCA.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHBMSCA.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHBMSCA.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHBMSCA.CPY
+!$COBCPY\DFHBMSCA.cpy
++"C:\Program Files (x86)\Micro Focus\Enterprise Developer\cpylib\DFHBMSCA.cpy"
+-"C:\Program Files (x86)\Micro Focus\Enterprise Developer\cpylib\DFHBMSCA.cpy"
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.CPY
+!$COBCPY\CABENDD.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CABENDD.cpy

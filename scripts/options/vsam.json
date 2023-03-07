@@ -1,6 +1,6 @@
 {
     "ip_address" : "127.0.0.1",
-    "region_name": "BANKVSAM",
+    "region_name": "BANKDEV",
     "product": "EDz",
     "configuration_files":
         {
@@ -15,7 +15,7 @@
     "JES": true,
     "CICS": true,
     "MQ": false,
-    "is64bit": false,
+    "is64bit": true,
     "database": "VSAM",
     "PAC": {
       "enabled": false,
