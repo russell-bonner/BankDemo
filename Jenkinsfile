@@ -73,7 +73,7 @@ node {
 		powershell '''
 		python MFBuild.py
 		'''
-		archiveArtifacts artifacts: 'build.txt', fingerprint: true
+		//archiveArtifacts artifacts: 'build.txt', fingerprint: true
 	}
     }
 
