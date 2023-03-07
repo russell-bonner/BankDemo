@@ -1,7 +1,5 @@
 properties([pipelineTriggers([githubPush()])])
 
-// V101
-
 node {
     environment {
      myJson = ''
