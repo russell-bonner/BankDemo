@@ -69,9 +69,9 @@ node {
     }
 
     stage('Build') {
-        dir('GitHub\\BankDemo\\scripts') {
+        dir('GitHub\\BankDemo\\scripts\\build') {
 		powershell '''
-		python build\\MFBuild.py
+		python MFBuild.py
 		'''
 		archiveArtifacts artifacts: 'build.txt', fingerprint: true
 	}
