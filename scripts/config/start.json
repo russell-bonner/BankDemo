@@ -1,0 +1,8 @@
+{
+  "mfUser": "sysad",
+  "mfPassword": "sysad",
+  "mfUseSession": true,
+  "mfGroup": "string",
+  "mfColdStart": true,
+  "mfStartMode": "warm"
+}
