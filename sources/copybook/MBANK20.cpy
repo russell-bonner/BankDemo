@@ -2,7 +2,7 @@
       *   Micro Focus BMS Screen Painter
       *   MapSet Name   MBANK20
       *   Date Created  03/08/2023
-      *   Time Created  09:55:12
+      *   Time Created  13:35:51
 
       *  Input Data For Map BANK20A
          01 BANK20AI REDEFINES MAPAREA.

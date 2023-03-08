@@ -25,7 +25,13 @@
            CALL 'SCUSTOMP' USING SCREEN-TITLES.
            MOVE SCREEN-TITLE1 TO AHEAD1O IN <<SCRN>>.
            MOVE SCREEN-TITLE2 TO AHEAD2O IN <<SCRN>>.
-           CALL 'SVERSONP' USING VERSION.
+      *    CALL 'SVERSONP' USING VERSION.
+      *
+           EXEC CICS LINK PROGRAM('SVERSONC')
+                          COMMAREA(VERSION)
+                          LENGTH(LENGTH OF VERSION)
+           END-EXEC.
+      *    
            MOVE VERSION TO AVERO IN <<SCRN>>.
            MOVE WS-TRAN-ID TO ATRANO IN <<SCRN>>.
            MOVE DD-TIME-OUTPUT TO ATIMEO IN <<SCRN>>.

@@ -16,7 +16,7 @@
     <stringAttribute key="JCLJOBNUMBER" value=""/>
     <stringAttribute key="JCLJOBSTEP" value=""/>
     <stringAttribute key="JCLPROGRAM" value=""/>
-    <stringAttribute key="REGION_NAME" value="BANKDEMO"/>
+    <stringAttribute key="REGION_NAME" value="BANKDEV"/>
     <intAttribute key="RESOLVECLIENTNAME" value="0"/>
     <stringAttribute key="SERVER_NAME" value="Default"/>
     <stringAttribute key="SERVICENAME" value=""/>
