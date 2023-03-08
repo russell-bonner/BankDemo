@@ -110,7 +110,7 @@
       *****************************************************************
       * This is the main process                                      *
       *****************************************************************
-           MOVE 'GB' TO WS-ACCOUNT-NAME-FLAG. 
+           MOVE 'US' TO WS-ACCOUNT-NAME-FLAG. 
 
       *****************************************************************
       * Determine what we have to do (read from or send to screen)    *
