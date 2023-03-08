@@ -1,0 +1,92 @@
+230307 20515450                     CASCD0100I ES Threaded Daemon Initialized (Ver CAS 8.0.00) process-id = 6608 (20:51:54.33) 20:51:54
+230307 20515450                     CASCD0099I ES Build Tag: ED8.0/20221216b_PU04 20:51:54
+230307 20515533                     CASCD0120I Server manager created for ES BANKDEV, process-id = 2276 20:51:55
+230307 20515544       2276 BANKDEV  CASSI0000I Server manager initialization started 20:51:55
+230307 20515546       2276 BANKDEV  CASSI4005I Retrieving ES configuration from MFDS (127.0.0.1:86) 20:51:55
+230307 20515554       2276 BANKDEV  CASSI4006I Single signon is not enforced for CICS clients and is enforced for IMS TM clients for this startup 20:51:55
+230307 20515554       2276 BANKDEV  CASSI9026I Region initializing in Configured startup mode. 20:51:55
+230307 20515555       2276 BANKDEV  CASSI9039I Monitor APIs supported on this platform. 20:51:55
+230307 20515557       2276 BANKDEV  CASSI1802I Dynamic debug attachment permitted 20:51:55
+230307 20515557       2276 BANKDEV  CASCF0065I Setting up Configuration Store 20:51:55
+230307 20515557       2276 BANKDEV  CASSI0012I Region running in 64 bit mode 20:51:55
+230307 20515557       2276 BANKDEV  CASSE0011I Region is running with Resource security disabled. 20:51:55
+230307 20515558       2276 BANKDEV  CASSI0017W ES support for CICS WEBSERVICES is disabled. CCSID tables 00000 to Unicode(UCS) not found 20:51:55
+230307 20515568       2276 BANKDEV  CASSI1749I Processing resources in startup list DEMOSTRT 20:51:55
+230307 20515568       2276 BANKDEV  CASSI1747W Group DEMOSIT specified in startup list not found 20:51:55
+230307 20515568       2276 BANKDEV  CASSI0001I Region will use SYSID DEMO, local CCSID 00001 and ascii CCSID 00001 20:51:55
+230307 20515569                     CASCD1117I Enterprise Server time keeper daemon created for Server BANKDEV, process-id = 872 20:51:55
+230307 20515569                     CASCD1095I ES TRC Service Process created for Server BANKDEV, process-id = 8184 20:51:55
+230307 20515569                     CASCD1075I ES TSC Service Process created for Server BANKDEV, process-id = 7096 20:51:55
+230307 20515571                     CASCD1038I ES Communications Server created, ES BANKDEV, process-id = 3216 20:51:55
+230307 20515576        872 BANKDEV  CASKC6027I Enterprise Server time keeper daemon initialized 20:51:55
+230307 20515576       7096 BANKDEV  CASTS0007I ES TSC Service Process initialization started 20:51:55
+230307 20515577       8184 BANKDEV  CASTS1007I ES TRC Service Process initialization started 20:51:55
+230307 20515577       2276 BANKDEV  CASKC1000I ES concurrent request limit: 0000000010 20:51:55
+230307 20515577       2276 BANKDEV  CASSI1000I Server Manager initialization completed successfully 20:51:55
+230307 20515579       7096 BANKDEV  CASTS5115I ES TSC Log facility file: C:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\logs\LOGTSTDQ.dat 20:51:55
+230307 20515579       7096 BANKDEV  CASTS5113I ES TSC Log facility cold started 20:51:55
+230307 20515579       2276 BANKDEV  JES000012I Batch Spool files have been "cold-started" 20:51:55
+230307 20515580       7096 BANKDEV  CASTS5116I ES TSC Log facility file size:      4 blocks (      316,236 bytes) 20:51:55
+230307 20515580       7096 BANKDEV  CASTS5117I ES TSC Log facility is running with 4 buffers of 63,028 bytes each 20:51:55
+230307 20515580       8184 BANKDEV  CASTS1002I ES TRC Service Process initialization complete 20:51:55
+230307 20515582       2276 BANKDEV  JES000051I Job Entry Subsystem (JES) services initialized 20:51:55
+230307 20515582       2276 BANKDEV  JES000059I JES 5 digit job numbering support enabled 20:51:55
+230307 20515582       7096 BANKDEV  CASTS0002I ES TSC Service Process initialization complete 20:51:55
+230307 20515582       3216 BANKDEV  CASCS5001I Communications interface 01 initialization started 20:51:55
+230307 20515583                     CASCD0127I SEP 00001 created for ES BANKDEV, process-id = 3184 20:51:55
+230307 20515583                     CASCD0127I SEP 00002 created for ES BANKDEV, process-id = 4408 20:51:55
+230307 20515588       3216 BANKDEV  CASCS5003I Communications interface 01 initialization complete 20:51:55
+230307 20515593       3184 BANKDEV  CASSI1500I SEP initialization started 20:51:55
+230307 20515594       4408 BANKDEV  CASSI1500I SEP initialization started 20:51:55
+230307 20515605       3184 BANKDEV  CASSI1600I SEP initialization completed successfully 20:51:56
+230307 20515617       3184 BANKDEV  CASSI4100I PLTPI Phase 1 Processing Starting 20:51:56
+230307 20515617       3184 BANKDEV  CASSI4103I PLTPI starting JES Phase 1 20:51:56
+230307 20515620       3184 BANKDEV  JES000042I SSTM not enabled: CICS 20:51:56
+230307 20515620       3184 BANKDEV  CASSI4105I PLTPI Phase 1 starting TS/TD initialization program 20:51:56
+230307 20515620       3184 BANKDEV  CASSI1425I TS non-recoverable cold started 20:51:56
+230307 20515620       3184 BANKDEV  CASSI1425I TS recoverable cold started 20:51:56
+230307 20515620       3184 BANKDEV  CASSI1426I TD non-recoverable cold started 20:51:56
+230307 20515620       3184 BANKDEV  CASSI1426I TD recoverable cold started 20:51:56
+230307 20515620       3184 BANKDEV  CASSI4106I PLTPI Phase 1 starting File initialization program 20:51:56
+230307 20515620       3184 BANKDEV  CASSI5001I PLTPI Phase 1 - No PLT Specified 20:51:56
+230307 20515620       3184 BANKDEV  CASSI5040I Active SEP memory strategy set to x'00000001', retain count 100 20:51:56
+230307 20515624       3216 BANKDEV  CASCS5100I Communications Process instance 01 is ready to accept requests 20:51:56
+230307 20515686                     CASCD1071I Administration SEP created for Server BANKDEV, process-id = 6568 20:51:56
+230307 20515690       6568 BANKDEV  CASSI1500I SEP initialization started 20:51:56
+230307 20515702       6568 BANKDEV  CASSI1600I SEP initialization completed successfully 20:51:57
+230307 20515708       4408 BANKDEV  CASSI1600I SEP initialization completed successfully 20:51:57
+230307 20515715       4408 BANKDEV  CASSI5021I PLTPI Phase 2 - No PLT Specified 20:51:57
+230307 20522442                     CASCD1060I JES Initiator created for Server BANKDEV, process-id = 2760 20:52:24
+230307 20522448       2760 BANKDEV  CASBJ0006I Batch initiator initialization started 20:52:24
+230307 20522454       2760 BANKDEV  CASBJ0005I Batch initiator started for job classes "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" 20:52:24
+230307 20524582       8856 BANKDEV  CASST0005I Shutdown of ES BANKDEV starting 20:52:45
+230307 20524582       4408 BANKDEV  CASSI8003I Enterprise Server "BANKDEV" termination completed 20:52:45
+230307 20524582       3184 BANKDEV  CASST5021I PLTSD Phase 2 - No PLT Specified 20:52:45
+230307 20524583       2760 BANKDEV  CASBJ0009I Batch initiator shutdown complete. 20:52:45
+230307 20524583       3184 BANKDEV  CASKC0003I SEP 0000003184 shutdown complete. 20:52:45
+230307 20524583        872 BANKDEV  CASKC6028I Enterprise Server time keeper daemon terminating 20:52:45
+230307 20524583                     CASCD1118I Enterprise Server time keeper daemon for Server BANKDEV has terminated normally. 20:52:45
+230307 20524583                     CASCD1052I JES Initiator for Server BANKDEV has terminated normally 20:52:45
+230307 20524583                     CASCD0131I SEP 00001 for server BANKDEV has terminated normally 20:52:45
+230307 20524590       8216 BANKDEV  CASSP0002I Server manager informed of process termination, pinfo =  B,0000002760 20:52:45
+230307 20524590       8744 BANKDEV  CASSP0002I Server manager informed of process termination, pinfo =  S,0000003184 20:52:45
+230307 20524784       4408 BANKDEV  CASST5001I PLTSD - No PLT Specified 20:52:47
+230307 20524784       4408 BANKDEV  CASKC0003I SEP 0000004408 shutdown complete. 20:52:47
+230307 20524784       2276 BANKDEV  CASST0000I Server manager termination started 20:52:47
+230307 20524784       3216 BANKDEV  CASCS5007I Communications interface 01 termination started 20:52:47
+230307 20524784                     CASCD0131I SEP 00002 for server BANKDEV has terminated normally 20:52:47
+230307 20525289       3216 BANKDEV  CASCS5008I Communications interface 01 termination complete 20:52:52
+230307 20525289                     CASCD1039I ES Communications Server for ES BANKDEV has terminated normally 20:52:52
+230307 20525390       8184 BANKDEV  CASTS1003I ES TRC Service Process termination started 20:52:53
+230307 20525390       6568 BANKDEV  CASKC0003I SEP 0000006568 shutdown complete. 20:52:53
+230307 20525392                     CASCD1072I Administration SEP for Server BANKDEV has terminated normally 20:52:53
+230307 20525492       7096 BANKDEV  CASTS0003I ES TSC Service Process termination started 20:52:54
+230307 20525492       8184 BANKDEV  CASTS1005I ES TRC Service Process termination complete 20:52:54
+230307 20525492                     CASCD1096I ES TRC Service Process for Region BANKDEV has terminated normally 20:52:54
+230307 20525594       7096 BANKDEV  CASTS0005I ES TSC Service Process termination complete 20:52:55
+230307 20525594                     CASCD1076I ES TSC Service Process for Region BANKDEV has terminated normally 20:52:55
+230307 20525794       2276 BANKDEV  CASST0001I Server manager termination completed successfully 20:52:57
+230307 20525794                     CASCD0130I Server manager BANKDEV has terminated normally 20:52:57
+230307 20525794                     CASCD0139I ES Daemon auto-shutdown started 20:52:57
+230307 20525895                     CASCD0101I ES Daemon Terminated 20:52:58
+230307 20525895                     CASCD0174I ES Console process termination control thread exited 20:52:58

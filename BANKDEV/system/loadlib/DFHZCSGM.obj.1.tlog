@@ -1,0 +1,15 @@
+#"C:\Program Files (x86)\Micro Focus\Enterprise Developer\bin64\cobol.exe" C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHZCSGM.cbl DELINT USEC:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib\DFHZCSGM.cbl.dir ;
+^C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHZCSGM.cbl
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHZSGM.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHZSGM.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHZSGM.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHZSGM.CPY
+!$COBCPY\DFHZSGM.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\DFHZSGM.cpy
+-C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\DFHZSGM.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\DFHAID.CPY
+!$COBCPY\DFHAID.cpy
++"C:\Program Files (x86)\Micro Focus\Enterprise Developer\cpylib\DFHAID.cpy"

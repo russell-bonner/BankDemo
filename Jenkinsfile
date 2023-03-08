@@ -43,11 +43,11 @@ node {
 	Try
 	{
 
-	 Invoke-WebRequest -Headers @{"X-Requested-With"="X-Requested-With";"Origin"="http://localhost:86";"Host"="localhost:86";"accept"="application/json";} http://127.0.0.1:10086/native/v1/regions/127.0.0.1/86/BANKVSAM/status -OutFile "Test\\logs\\status.json" | ConvertFrom-Json 
+	 Invoke-WebRequest -Headers @{"X-Requested-With"="X-Requested-With";"Origin"="http://localhost:86";"Host"="localhost:86";"accept"="application/json";} http://127.0.0.1:10086/native/v1/regions/127.0.0.1/86/BANKTEST/status -OutFile "Test\\logs\\status.json" | ConvertFrom-Json 
 	 write-host "***************"
 	 write-host "*--- ERROR ---*"
 	 write-host "*"
-	 write-host "* BANKVSAM region exists. Please DELETE."
+	 write-host "* BANKTEST region exists. Please DELETE."
 	 write-host "*"
 	 write-host "*-------------*"
 	 write-host "***************"
@@ -58,7 +58,7 @@ node {
 	 write-host "**************"
 	 write-host "*--- INFO ---*"
 	 write-host "*"
-	 write-host "* BANKVSAM region does NOT exist. Processing continues"
+	 write-host "* BANKTEST region does NOT exist. Processing continues"
 	 write-host "*"
 	 write-host "*------------*"
 	 write-host "**************"
@@ -96,18 +96,18 @@ node {
 		bat '''curl -X POST "http://127.0.0.1:10086/logon" -H "Cache-Control: no-cache" -H "Origin:http://localhost:86" -H "Host:localhost:86" -H "accept: application/json" -H "X-Requested-With: X-Requested-With" -H "Content-Type: application/json" -d "@logon.json"'''
 
 		//IMPORT JSON
-		bat '''curl -X POST "http://127.0.0.1:10086/native/v1/import/127.0.0.1/86" -H "Cache-Control: no-cache" -H "Origin:http://localhost:86" -H "Host:localhost:86" -H "accept: application/json" -H "X-Requested-With: X-Requested-With" -H "Content-Type: application/json" -d "@BANKVSAM.json"'''
+		bat '''curl -X POST "http://127.0.0.1:10086/native/v1/import/127.0.0.1/86" -H "Cache-Control: no-cache" -H "Origin:http://localhost:86" -H "Host:localhost:86" -H "accept: application/json" -H "X-Requested-With: X-Requested-With" -H "Content-Type: application/json" -d "@BANKTEST.json"'''
 
-		//Start BANKVSAM
+		//Start BANKTEST
 		sleep 5
-		bat '''curl -X POST "http://localhost:10086/native/v1/regions/127.0.0.1/86/BANKVSAM/start" -H "Cache-Control: no-cache" -H "Origin:http://localhost:86" -H "Host:localhost:86" -H "accept: application/json" -H "X-Requested-With: X-Requested-With" -H "Content-Type: application/json" -d "@start.json"'''
+		bat '''curl -X POST "http://localhost:10086/native/v1/regions/127.0.0.1/86/BANKTEST/start" -H "Cache-Control: no-cache" -H "Origin:http://localhost:86" -H "Host:localhost:86" -H "accept: application/json" -H "X-Requested-With: X-Requested-With" -H "Content-Type: application/json" -d "@start.json"'''
 	}
     }
     
     stage('Test') {  
 	sleep 5
 	powershell '''
-	Invoke-WebRequest -Headers @{"X-Requested-With"="X-Requested-With";"Origin"="http://localhost:86";"Host"="localhost:86";"accept"="application/json";} http://127.0.0.1:10086/native/v1/regions/127.0.0.1/86/BANKVSAM/status -OutFile "Test\\logs\\test_region_status.json" | ConvertFrom-Json  
+	Invoke-WebRequest -Headers @{"X-Requested-With"="X-Requested-With";"Origin"="http://localhost:86";"Host"="localhost:86";"accept"="application/json";} http://127.0.0.1:10086/native/v1/regions/127.0.0.1/86/BANKTEST/status -OutFile "Test\\logs\\test_region_status.json" | ConvertFrom-Json  
 	$env:myJson = Get-Content 'test\\logs\\test_region_status.json' | ConvertFrom-Json
 	$env:responseCN = (Get-Content 'test\\logs\\test_region_status.json' | ConvertFrom-Json).CN
 	$env:responsemfError = (Get-Content 'test\\logs\\test_region_status.json' | ConvertFrom-Json).mfError

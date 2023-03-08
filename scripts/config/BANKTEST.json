@@ -4,7 +4,7 @@
     "mfServerList": [
         {
             "mfStructVersion": 26,
-            "CN": "BANKVSAM",
+            "CN": "BANKTEST",
             "mfUID": "1.3.6.1.4.1.5043.1.21.1.63eca1d4.2980.125",
             "description": "Test Region",
             "mfError": "",

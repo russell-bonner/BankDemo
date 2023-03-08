@@ -1,0 +1,22 @@
+#"C:\Program Files (x86)\Micro Focus\Enterprise Developer\bin64\cobol.exe" C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\SCASHDRV.cbl DELINT USEC:\Users\mfisys1\source\repos\BankDemo\BANKDEV\system\loadlib\SCASHDRV.cbl.dir ;
+^C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\SCASHDRV.cbl
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHDAT.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHDAT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHDAT.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHDAT.CPY
+!$COBCPY\CCASHDAT.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CCASHDAT.cpy
+-C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CCASHDAT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHEXT.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHEXT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHEXT.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CCASHEXT.CPY
+!$COBCPY\CCASHEXT.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CCASHEXT.cpy
+-C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CCASHEXT.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.cpy
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.cpy
+!C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.CPY
+?C:\Users\mfisys1\source\repos\BankDemo\sources\cobol\core\CABENDD.CPY
+!$COBCPY\CABENDD.cpy
++C:\Users\mfisys1\source\repos\BankDemo\sources\copybook\CABENDD.cpy
