@@ -46,6 +46,13 @@
          05  WS-SAVED-EIBCALEN                     PIC S9(4) COMP.
          05  WS-WORK1                              PIC X(1).
          05  WS-SUB1                               PIC S9(4) COMP.
+         05  WS-ACCOUNT-NAME-FLAG                  PIC X(2).
+           88 WS-ACCOUNT-NAME-US                   VALUE 'US'.      
+           88 WS-ACCOUNT-NAME-GB                   VALUE 'GB'.  
+           88 WS-ACCOUNT-NAME-FRANCE               VALUE 'FR'. 
+           88 WS-ACCOUNT-NAME-GERMANY              VALUE 'GE'.       
+           88 WS-ACCOUNT-NAME-SPAIN                VALUE 'ES'.   
+           88 WS-ACCOUNT-NAME-JAPAN                VALUE 'JP'.           
 
        01  MAPAREA                                 PIC X(2048).
        COPY MBANK50.
@@ -103,6 +110,7 @@
       *****************************************************************
       * This is the main process                                      *
       *****************************************************************
+           MOVE 'GB' TO WS-ACCOUNT-NAME-FLAG. 
 
       *****************************************************************
       * Determine what we have to do (read from or send to screen)    *
@@ -368,6 +376,16 @@
               MOVE BANK-SCR50-TO1  TO TO1O  IN BANK50AO
               MOVE BANK-SCR50-ACC1 TO ACC1O IN BANK50AO
               MOVE BANK-SCR50-DSC1 TO DSC1O IN BANK50AO
+              EVALUATE TRUE
+                 WHEN WS-ACCOUNT-NAME-US
+                    IF BANK-SCR50-DSC1(1:8) IS EQUAL TO 'Checking'
+                       MOVE 'Checking' TO DSC1O IN BANK50AO
+                    END-IF   
+                 WHEN WS-ACCOUNT-NAME-GB
+                    IF BANK-SCR50-DSC1(1:8) IS EQUAL TO 'Checking'              
+                       MOVE 'Current' TO DSC1O IN BANK50AO
+                    END-IF
+              END-EVALUATE               
               MOVE BANK-SCR50-BAL1 TO BAL1O IN BANK50AO
            ELSE
               MOVE DFHBMASK TO FROM1A IN BANK50AI
@@ -385,6 +403,16 @@
               MOVE BANK-SCR50-TO2  TO TO2O  IN BANK50AO
               MOVE BANK-SCR50-ACC2 TO ACC2O IN BANK50AO
               MOVE BANK-SCR50-DSC2 TO DSC2O IN BANK50AO
+              EVALUATE TRUE
+                 WHEN WS-ACCOUNT-NAME-US
+                    IF BANK-SCR50-DSC2(1:8) IS EQUAL TO 'Checking'
+                       MOVE 'Checking' TO DSC2O IN BANK50AO
+                    END-IF   
+                 WHEN WS-ACCOUNT-NAME-GB
+                    IF BANK-SCR50-DSC2(1:8) IS EQUAL TO 'Checking'              
+                       MOVE 'Current' TO DSC2O IN BANK50AO
+                    END-IF
+              END-EVALUATE                 
               MOVE BANK-SCR50-BAL2 TO BAL2O IN BANK50AO
            ELSE
               MOVE DFHBMASK TO FROM2A IN BANK50AI
@@ -402,6 +430,16 @@
               MOVE BANK-SCR50-TO3  TO TO3O  IN BANK50AO
               MOVE BANK-SCR50-ACC3 TO ACC3O IN BANK50AO
               MOVE BANK-SCR50-DSC3 TO DSC3O IN BANK50AO
+              EVALUATE TRUE
+                 WHEN WS-ACCOUNT-NAME-US
+                    IF BANK-SCR50-DSC3(1:8) IS EQUAL TO 'Checking'
+                       MOVE 'Checking' TO DSC3O IN BANK50AO
+                    END-IF   
+                 WHEN WS-ACCOUNT-NAME-GB
+                    IF BANK-SCR50-DSC3(1:8) IS EQUAL TO 'Checking'              
+                       MOVE 'Current' TO DSC3O IN BANK50AO
+                    END-IF
+              END-EVALUATE               
               MOVE BANK-SCR50-BAL3 TO BAL3O IN BANK50AO
            ELSE
               MOVE DFHBMASK TO FROM3A IN BANK50AI
@@ -419,6 +457,16 @@
               MOVE BANK-SCR50-TO4  TO TO4O  IN BANK50AO
               MOVE BANK-SCR50-ACC4 TO ACC4O IN BANK50AO
               MOVE BANK-SCR50-DSC4 TO DSC4O IN BANK50AO
+              EVALUATE TRUE
+                 WHEN WS-ACCOUNT-NAME-US
+                    IF BANK-SCR50-DSC4(1:8) IS EQUAL TO 'Checking'
+                       MOVE 'Checking' TO DSC4O IN BANK50AO
+                    END-IF   
+                 WHEN WS-ACCOUNT-NAME-GB
+                    IF BANK-SCR50-DSC4(1:8) IS EQUAL TO 'Checking'              
+                       MOVE 'Current' TO DSC4O IN BANK50AO
+                    END-IF
+              END-EVALUATE                             
               MOVE BANK-SCR50-BAL4 TO BAL4O IN BANK50AO
            ELSE
               MOVE DFHBMASK TO FROM4A IN BANK50AI
@@ -427,6 +475,7 @@
               MOVE SPACE TO TO4O IN BANK50AO
               MOVE SPACES TO ACC4O IN BANK50AO
               MOVE SPACES TO DSC4O IN BANK50AO
+              
               MOVE SPACES TO BAL4O IN BANK50AO
            END-IF.
            IF BANK-SCR50-ACC5 IS NOT EQUAL TO SPACES
@@ -436,6 +485,16 @@
               MOVE BANK-SCR50-TO5  TO TO5O  IN BANK50AO
               MOVE BANK-SCR50-ACC5 TO ACC5O IN BANK50AO
               MOVE BANK-SCR50-DSC5 TO DSC5O IN BANK50AO
+              EVALUATE TRUE
+                 WHEN WS-ACCOUNT-NAME-US
+                    IF BANK-SCR50-DSC5(1:8) IS EQUAL TO 'Checking'
+                       MOVE 'Checking' TO DSC5O IN BANK50AO
+                    END-IF   
+                 WHEN WS-ACCOUNT-NAME-GB
+                    IF BANK-SCR50-DSC5(1:8) IS EQUAL TO 'Checking'              
+                       MOVE 'Current' TO DSC5O IN BANK50AO
+                    END-IF
+              END-EVALUATE                             
               MOVE BANK-SCR50-BAL5 TO BAL5O IN BANK50AO
            ELSE
               MOVE DFHBMASK TO FROM5A IN BANK50AI
@@ -453,6 +512,16 @@
               MOVE BANK-SCR50-TO6  TO TO6O  IN BANK50AO
               MOVE BANK-SCR50-ACC6 TO ACC6O IN BANK50AO
               MOVE BANK-SCR50-DSC6 TO DSC6O IN BANK50AO
+              EVALUATE TRUE
+                 WHEN WS-ACCOUNT-NAME-US
+                    IF BANK-SCR50-DSC6(1:8) IS EQUAL TO 'Checking'
+                       MOVE 'Checking' TO DSC6O IN BANK50AO
+                    END-IF   
+                 WHEN WS-ACCOUNT-NAME-GB
+                    IF BANK-SCR50-DSC6(1:8) IS EQUAL TO 'Checking'              
+                       MOVE 'Current' TO DSC6O IN BANK50AO
+                    END-IF
+              END-EVALUATE                             
               MOVE BANK-SCR50-BAL6 TO BAL6O IN BANK50AO
            ELSE
               MOVE DFHBMASK TO FROM6A IN BANK50AI

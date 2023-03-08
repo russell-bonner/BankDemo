@@ -46,7 +46,14 @@
          05  WS-SAVED-EIBCALEN                     PIC S9(4) COMP.
          05  WS-WORK1                              PIC X(1).
          05  WS-SUB1                               PIC S9(4) COMP.
-
+         05  WS-ACCOUNT-NAME-FLAG                  PIC X(2).
+           88 WS-ACCOUNT-NAME-US                   VALUE 'US'.      
+           88 WS-ACCOUNT-NAME-GB                   VALUE 'GB'.  
+           88 WS-ACCOUNT-NAME-FRANCE               VALUE 'FR'. 
+           88 WS-ACCOUNT-NAME-GERMANY              VALUE 'GE'.       
+           88 WS-ACCOUNT-NAME-SPAIN                VALUE 'ES'.   
+           88 WS-ACCOUNT-NAME-JAPAN                VALUE 'JP'.       
+           
        01  MAPAREA                                 PIC X(2048).
        COPY MBANK30.
 
@@ -103,7 +110,8 @@
       *****************************************************************
       * This is the main process                                      *
       *****************************************************************
-
+           MOVE 'GB' TO WS-ACCOUNT-NAME-FLAG.    
+           
       *****************************************************************
       * Determine what we have to do (read from or send to screen)    *
       *****************************************************************
@@ -300,6 +308,16 @@
            END-IF.
            MOVE BANK-SCR30-ACC1 TO ACC1O IN BANK30AO.
            MOVE BANK-SCR30-DSC1 TO DSC1O IN BANK30AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR30-DSC1(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO DSC1O IN BANK30AO
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR30-DSC1(1:8) IS EQUAL TO 'Checking'                 
+                    MOVE 'Current' TO DSC1O IN BANK30AO
+                 END-IF
+           END-EVALUATE.  
            MOVE BANK-SCR30-BAL1 TO BAL1O IN BANK30AO.
            MOVE BANK-SCR30-SRV1 TO SRV1O IN BANK30AO.
            MOVE BANK-SCR30-DTE1 TO DTE1O IN BANK30AO.
@@ -314,6 +332,16 @@
            END-IF.
            MOVE BANK-SCR30-ACC2 TO ACC2O IN BANK30AO.
            MOVE BANK-SCR30-DSC2 TO DSC2O IN BANK30AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR30-DSC2(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO DSC2O IN BANK30AO
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR30-DSC2(1:8) IS EQUAL TO 'Checking'                 
+                    MOVE 'Current' TO DSC2O IN BANK30AO
+                 END-IF
+           END-EVALUATE.        
            MOVE BANK-SCR30-BAL2 TO BAL2O IN BANK30AO.
            MOVE BANK-SCR30-SRV2 TO SRV2O IN BANK30AO.
            MOVE BANK-SCR30-DTE2 TO DTE2O IN BANK30AO.
@@ -328,6 +356,16 @@
            END-IF.
            MOVE BANK-SCR30-ACC3 TO ACC3O IN BANK30AO.
            MOVE BANK-SCR30-DSC3 TO DSC3O IN BANK30AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR30-DSC3(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO DSC3O IN BANK30AO
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR30-DSC3(1:8) IS EQUAL TO 'Checking'                 
+                    MOVE 'Current' TO DSC3O IN BANK30AO
+                 END-IF
+           END-EVALUATE.              
            MOVE BANK-SCR30-BAL3 TO BAL3O IN BANK30AO.
            MOVE BANK-SCR30-SRV3 TO SRV3O IN BANK30AO.
            MOVE BANK-SCR30-DTE3 TO DTE3O IN BANK30AO.
@@ -342,6 +380,16 @@
            END-IF.
            MOVE BANK-SCR30-ACC4 TO ACC4O IN BANK30AO.
            MOVE BANK-SCR30-DSC4 TO DSC4O IN BANK30AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR30-DSC4(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO DSC4O IN BANK30AO
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR30-DSC4(1:8) IS EQUAL TO 'Checking'                 
+                    MOVE 'Current' TO DSC4O IN BANK30AO
+                 END-IF
+           END-EVALUATE.  
            MOVE BANK-SCR30-BAL4 TO BAL4O IN BANK30AO.
            MOVE BANK-SCR30-SRV4 TO SRV4O IN BANK30AO.
            MOVE BANK-SCR30-DTE4 TO DTE4O IN BANK30AO.
@@ -356,6 +404,16 @@
            END-IF.
            MOVE BANK-SCR30-ACC5 TO ACC5O IN BANK30AO.
            MOVE BANK-SCR30-DSC5 TO DSC5O IN BANK30AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR30-DSC5(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO DSC5O IN BANK30AO
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR30-DSC5(1:8) IS EQUAL TO 'Checking'                 
+                    MOVE 'Current' TO DSC5O IN BANK30AO
+                 END-IF
+           END-EVALUATE.  
            MOVE BANK-SCR30-BAL5 TO BAL5O IN BANK30AO.
            MOVE BANK-SCR30-SRV5 TO SRV5O IN BANK30AO.
            MOVE BANK-SCR30-DTE5 TO DTE5O IN BANK30AO.
@@ -370,6 +428,16 @@
            END-IF.
            MOVE BANK-SCR30-ACC6 TO ACC6O IN BANK30AO.
            MOVE BANK-SCR30-DSC6 TO DSC6O IN BANK30AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR30-DSC6(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO DSC6O IN BANK30AO
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR30-DSC6(1:8) IS EQUAL TO 'Checking'                 
+                    MOVE 'Current' TO DSC6O IN BANK30AO
+                 END-IF
+           END-EVALUATE.  
            MOVE BANK-SCR30-BAL6 TO BAL6O IN BANK30AO.
            MOVE BANK-SCR30-SRV6 TO SRV6O IN BANK30AO.
            MOVE BANK-SCR30-DTE6 TO DTE6O IN BANK30AO.
