@@ -192,6 +192,7 @@ copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.idy
          <file compile="true" path="core/ZBNKEXT1.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/ZBNKLOAD.cbl" xsi:type="cobolFile"/>
          <file compile="true" path="core/ZBNKPRT1.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="core/SVERSONC.cbl" xsi:type="cobolFile"/>
       </filetype>
       <filetype type="asm" xsi:type="cobolFileContainer"/>
       <filetype type="psb" xsi:type="cobolFileContainer"/>

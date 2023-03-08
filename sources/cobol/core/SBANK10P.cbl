@@ -270,7 +270,13 @@
 
 
       *    COPY CVERSNP1 REPLACING ==<<SCRN>>== BY ==BANK10AO==.
-           CALL 'SVERSONP' USING VERSION.
+      *    CALL 'SVERSONP' USING VERSION.
+      *
+           EXEC CICS LINK PROGRAM('SVERSONC')
+                          COMMAREA(VERSION)
+                          LENGTH(LENGTH OF VERSION)
+           END-EXEC.
+      *
            MOVE VERSION TO VERO IN BANK10AO.
 
            MOVE WS-TRAN-ID TO TRANO IN BANK10AO.
@@ -318,7 +324,15 @@
            CALL 'SCUSTOMP' USING SCREEN-TITLES.
            MOVE SCREEN-TITLE1 TO AHEAD1O IN HELP10AO.
            MOVE SCREEN-TITLE2 TO AHEAD2O IN HELP10AO.
-           CALL 'SVERSONP' USING VERSION.
+      *    CALL 'SVERSONP' USING VERSION.
+      *
+           EXEC CICS LINK PROGRAM('SVERSONC')
+                          COMMAREA(VERSION)
+                          LENGTH(LENGTH OF VERSION)
+           END-EXEC.
+      *
+           MOVE VERSION TO VERO IN BANK10AO.
+          
            MOVE VERSION TO AVERO IN HELP10AO.
            MOVE WS-TRAN-ID TO ATRANO IN HELP10AO.
            MOVE DD-TIME-OUTPUT TO ATIMEO IN HELP10AO.
@@ -393,7 +407,15 @@
            CALL 'SCUSTOMP' USING SCREEN-TITLES.
            MOVE SCREEN-TITLE1 TO EXT-OP-HEAD1.
            MOVE SCREEN-TITLE2 TO EXT-OP-HEAD2.
-           CALL 'SVERSONP' USING SCREEN-TITLES.
+      *    CALL 'SVERSONP' USING SCREEN-TITLES.
+      *
+           EXEC CICS LINK PROGRAM('SVERSONC')
+                          COMMAREA(SCREEN-TITLES)
+                          LENGTH(LENGTH OF SCREEN-TITLES)
+           END-EXEC.
+      *
+           MOVE VERSION TO VERO IN BANK10AO.
+           
            MOVE VERSION TO EXT-OP-VERSION.
       * Move in screen name
            MOVE 'BANK10' TO EXT-OP-SCREEN.
