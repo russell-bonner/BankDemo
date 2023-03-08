@@ -390,7 +390,13 @@
            CALL 'SCUSTOMP' USING SCREEN-TITLES.
            MOVE SCREEN-TITLE1 TO EXT-OP-HEAD1.
            MOVE SCREEN-TITLE2 TO EXT-OP-HEAD2.
-           CALL 'SVERSONP' USING VERSION.
+      *    CALL 'SVERSONP' USING VERSION.
+      *
+           EXEC CICS LINK PROGRAM('SVERSONC')
+                          COMMAREA(VERSION)
+                          LENGTH(LENGTH OF VERSION)
+           END-EXEC.
+      *
            MOVE VERSION TO EXT-OP-VERSION.
       * Move in screen name
            MOVE 'BANK35' TO EXT-OP-SCREEN.
