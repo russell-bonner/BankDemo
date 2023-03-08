@@ -1,8 +1,8 @@
       *   Micro Focus COBOL 2017  8.0.00215
       *   Micro Focus BMS Screen Painter
       *   MapSet Name   MBANKZZ
-      *   Date Created  03/07/2023
-      *   Time Created  20:34:36
+      *   Date Created  03/08/2023
+      *   Time Created  09:55:14
 
       *  Input Data For Map BANKZZA
          01 BANKZZAI REDEFINES MAPAREA.

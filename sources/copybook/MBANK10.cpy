@@ -1,8 +1,8 @@
       *   Micro Focus COBOL 2017  8.0.00215
       *   Micro Focus BMS Screen Painter
       *   MapSet Name   MBANK10
-      *   Date Created  03/07/2023
-      *   Time Created  20:34:35
+      *   Date Created  03/08/2023
+      *   Time Created  09:55:12
 
       *  Input Data For Map BANK10A
          01 BANK10AI REDEFINES MAPAREA.
