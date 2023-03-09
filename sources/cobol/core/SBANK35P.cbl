@@ -45,6 +45,13 @@
              VALUE 'UNKNOWN'.
          05  WS-SAVED-EIBCALEN                     PIC S9(4) COMP.
          05  WS-WORK1                              PIC X(1).
+         05  WS-ACCOUNT-NAME-FLAG                  PIC X(2).
+           88 WS-ACCOUNT-NAME-US                   VALUE 'US'.      
+           88 WS-ACCOUNT-NAME-GB                   VALUE 'GB'.  
+           88 WS-ACCOUNT-NAME-FRANCE               VALUE 'FR'. 
+           88 WS-ACCOUNT-NAME-GERMANY              VALUE 'GE'.       
+           88 WS-ACCOUNT-NAME-SPAIN                VALUE 'ES'.   
+           88 WS-ACCOUNT-NAME-JAPAN                VALUE 'JP'.         
 
        01  MAPAREA                                 PIC X(2048).
        COPY MBANK35.
@@ -102,7 +109,8 @@
       *****************************************************************
       * This is the main process                                      *
       *****************************************************************
-
+           MOVE 'US' TO WS-ACCOUNT-NAME-FLAG.   
+           
       *****************************************************************
       * Determine what we have to do (read from or send to screen)    *
       *****************************************************************
@@ -232,6 +240,16 @@
 
            MOVE BANK-SCR35-ACC TO ACCNOO IN BANK35AO.
            MOVE BANK-SCR35-DSC TO ACCTYPEO IN BANK35AO.
+           EVALUATE TRUE
+              WHEN WS-ACCOUNT-NAME-US
+                 IF BANK-SCR35-DSC(1:8) IS EQUAL TO 'Checking'
+                    MOVE 'Checking' TO ACCTYPEO IN BANK35AO             
+                 END-IF   
+              WHEN WS-ACCOUNT-NAME-GB
+                 IF BANK-SCR35-DSC(1:8) IS EQUAL TO 'Checking'                  
+                    MOVE 'Current' TO ACCTYPEO IN BANK35AO              
+                 END-IF
+           END-EVALUATE.           
 
            MOVE BANK-SCR35-BAL TO BALO IN BANK35AO.
            MOVE BANK-SCR35-DTE TO DTEO IN BANK35AO.
