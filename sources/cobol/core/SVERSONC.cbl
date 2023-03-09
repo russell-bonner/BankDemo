@@ -39,7 +39,7 @@
       * Version to show on screens                                    *
       *****************************************************************
        01  WS-VERSION                              PIC X(7)
-           VALUE 'V7.0 US'.
+           VALUE 'V7.1 GB'.
 
        LINKAGE SECTION.
        01  DFHCOMMAREA.
