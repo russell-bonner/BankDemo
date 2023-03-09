@@ -18,17 +18,12 @@
       *****************************************************************
 
       *****************************************************************
-      * CVERSNP1.CPY                                                  *
+      * CVERSNL.CPY                                                   *
       *---------------------------------------------------------------*
-      * Procedure code to populate version                            *
+      * Procedure code to set country code for account type           *
       *****************************************************************
-      *    CALL 'SVERSONP' USING VERSION.
       *
-           EXEC CICS LINK PROGRAM('SVERSONC')
-                          COMMAREA(VERSION)
-                          LENGTH(LENGTH OF VERSION)
-           END-EXEC.
-      *
-           MOVE VERSION TO VERO IN <<SCRN>>.
+           MOVE 'US' TO WS-ACCOUNT-NAME-FLAG.   
+
 
       * $ Version 5.99c sequenced on Wednesday 3 Mar 2011 at 1:00pm

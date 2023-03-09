@@ -109,7 +109,7 @@
       *****************************************************************
       * This is the main process                                      *
       *****************************************************************
-           MOVE 'US' TO WS-ACCOUNT-NAME-FLAG.   
+           COPY CVERSNL.   
            
       *****************************************************************
       * Determine what we have to do (read from or send to screen)    *

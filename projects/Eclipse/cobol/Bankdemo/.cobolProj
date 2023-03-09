@@ -232,6 +232,7 @@ copy C:\Users\mfisys1\git\BankDemo\projects\Eclipse\cobol\Bankdemo\loadlib\*.idy
       <filetype type="lin" xsi:type="cobolFileContainer"/>
       <filetype type="dbd" xsi:type="cobolFileContainer"/>
       <folders xsi:type="cobolFolderContainer">
+         <folder compile="true" path="copybook" xsi:type="cobolFolder"/>
          <folder compile="true" path="repos" xsi:type="cobolFolder"/>
          <folder compile="true" path="vsam" xsi:type="cobolFolder"/>
          <folder compile="true" path="bms" xsi:type="cobolFolder"/>
