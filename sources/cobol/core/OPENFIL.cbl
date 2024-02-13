@@ -14,7 +14,7 @@
       * TO THE EXTENT PERMITTED BY LAW, IN NO EVENT WILL              *
       * MICRO FOCUS HAVE ANY LIABILITY WHATSOEVER IN CONNECTION       *
       * WITH THIS SOFTWARE.                                           *
-      *                                                               *
+      *    RB                                                         *
       *****************************************************************
 
        identification division.
