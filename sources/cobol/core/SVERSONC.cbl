@@ -39,7 +39,7 @@
       * Version to show on screens                                    *
       *****************************************************************
        01  WS-VERSION                              PIC X(7)
-           VALUE '21Feb24'.
+           VALUE '17Feb24'.
 
        LINKAGE SECTION.
        01  DFHCOMMAREA.
