@@ -23,7 +23,7 @@
       * Procedure code to set country code for account type           *
       *****************************************************************
       *
-           MOVE 'GA' TO WS-ACCOUNT-NAME-FLAG.   
+           MOVE 'GB' TO WS-ACCOUNT-NAME-FLAG.   
 
 
       * $ Version 5.99c sequenced on Wednesday 3 Mar 2011 at 1:00pm
